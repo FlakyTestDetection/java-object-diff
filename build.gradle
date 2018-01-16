@@ -129,6 +129,10 @@ bintray {
 				sign = true
 				passphrase = System.getenv('BINTRAY_GPG_PASSPHRASE')
 			}
+			mavenCentralSync {
+				user = System.getenv('MAVEN_CENTRAL_USER_TOKEN_KEY')
+				password = System.getenv('MAVEN_CENTRAL_USER_TOKEN_PASSWORD')
+			}
 		}
 	}
 }
@@ -165,6 +169,9 @@ def pomConfig = {
 			name "Daniel Bechler"
 			url "https://github.com/SQiShER"
 		}
+	}
+	scm {
+		url "https://github.com/SQiShER/java-object-diff"
 	}
 }
 
